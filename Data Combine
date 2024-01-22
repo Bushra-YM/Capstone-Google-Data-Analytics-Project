@@ -1,0 +1,50 @@
+
+-- GOOGLE DATA ANALYTICS CAPSTONE SQL-CODE
+-- Created in BigQuery
+
+
+First, we'll merge the 12 monthly bike trip data tables into a unified table,
+encompassing all bike trips occurring between January 1, 2021, and December 31, 2021. 
+Following that, we'll extend this process to cover the months from January 2023 to December 2023.
+
+
+CREATE TABLE `root-gist-408601.bikes.combined_tripdata` AS
+SELECT * FROM `root-gist-408601.bikes.trip_data01`
+UNION ALL
+SELECT * FROM `root-gist-408601.bikes.trip_data02`
+UNION ALL
+SELECT * FROM `root-gist-408601.bikes.trip_data03`
+UNION ALL
+SELECT * FROM `root-gist-408601.bikes.trip_data04`
+UNION ALL
+SELECT * FROM `root-gist-408601.bikes.trip_data05`
+UNION ALL
+SELECT * FROM `root-gist-408601.bikes.trip_data06`
+UNION ALL
+SELECT * FROM `root-gist-408601.bikes.trip_data07`
+UNION ALL
+SELECT * FROM `root-gist-408601.bikes.trip_data08`
+UNION ALL
+SELECT * FROM `root-gist-408601.bikes.trip_data09`
+UNION ALL
+SELECT * FROM `root-gist-408601.bikes.trip_data10`
+UNION ALL
+SELECT * FROM `root-gist-408601.bikes.trip_data11`
+UNION ALL
+SELECT * FROM `root-gist-408601.bikes.trip_data12`;
+
+
+
+
+-- To confirm, I ran the query 
+
+
+'SELECT * FROM root-gist-408601.bikes.combined_tripdata'
+
+
+and recorded a total count of 5,719,877 rows.
+The difference from the combined sum of the 12 tables can be explained by the elimination of duplicate rows in the UNION operation.
+In the context of using UNION ALL, it retains all rows from the specified tables, essentially appending them together. 
+Consequently, the total row count in the combined table should match the sum of rows from the 12 individual tables.
+
+
