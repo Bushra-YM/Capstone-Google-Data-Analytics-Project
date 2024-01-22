@@ -1,0 +1,39 @@
+
+---- Data Exploration  ----
+
+
+Checking the duplicates in the data >>>
+  
+SELECT COUNT(ride_id) - COUNT(DISTINCT ride_id) AS duplicate_rows
+FROM `root-gist-408601.bikes.combined_tripdata`;
+
+
+---------------------------------
+
+---- Checking timestamps for started_at and ended_at in the format YYYY-MM-DD hh:mm:ss UTC ----
+
+  
+SELECT started_at, ended_at
+FROM `root-gist-408601.bikes.combined_tripdata`
+LIMIT 20;
+
+
+------------
+
+
+SELECT COUNT(*) AS longer_than_a_day
+FROM `root-gist-408601.bikes.combined_tripdata`
+WHERE TIMESTAMP_DIFF(ended_at, started_at, SECOND) >= 86400;   -- longer than a day - total rows = 6418
+
+
+------------
+
+
+SELECT COUNT(*) AS less_than_a_minute
+FROM `root-gist-408601.bikes.combined_tripdata`
+WHERE TIMESTAMP_DIFF(ended_at, started_at, SECOND) <= 60;   -- -- less than a minute - total rows = 151069
+
+-------------
+
+
+ In the next step, we are going to create a new table with clean data based on our insights while exploring the data >>>
