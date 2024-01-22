@@ -1,0 +1,99 @@
+
+--Data Analysis
+
+  
+-- Bikes Types --
+-- Determine the count of bike ride categories by the rider type, distinguishing between members or annual riders. Utilize the following code:
+
+
+SELECT
+  member_casual as Type_of_Rider,
+  rideable_type as bike_type,
+  COUNT(ride_id) AS Total_Num_of_Rides
+FROM `bikes.combined_tripdata`
+GROUP BY
+  Type_of_Rider, bike_type;
+
+
+--This code groups the bike rides based on the rider type (member or annual rider) and the bike type, providing the total number of rides for each combination.--
+
+
+
+
+--------- Total Rides By Type ------------
+
+
+--The code determines the total count of bike rides for each unique rideable type, offering insights into the distribution of rides across different types.
+
+
+SELECT
+  rideable_type,
+  COUNT(rideable_type) AS Total_Rides
+FROM
+  `root-gist-408601.bikes.combined_tripdata`
+GROUP BY
+  rideable_type;
+
+
+
+
+--------- No. of trips per month  ------------
+
+
+SELECT month, member_casual, COUNT(ride_id) AS total_trips
+FROM `root-gist-408601.bikes.cleaned_combined_data`
+GROUP BY month, member_casual
+ORDER BY member_casual, month ASC;
+
+
+--------- No. of trips per week  ------------
+
+
+SELECT day_of_week, member_casual, COUNT(ride_id) AS total_trips
+FROM `root-gist-408601.bikes.cleaned_combined_data`
+GROUP BY day_of_week, member_casual
+ORDER BY member_casual, day_of_week;
+
+
+--------- No. of trips per hour  ------------
+
+
+SELECT EXTRACT(HOUR FROM started_at) AS hour_of_day, member_casual, COUNT(ride_id) AS total_trips
+FROM `root-gist-408601.bikes.cleaned_combined_data`
+GROUP BY hour_of_day, member_casual
+ORDER BY member_casual, hour_of_day;
+
+
+
+
+--------- Average Ride Length per hour ------------
+
+
+SELECT EXTRACT(HOUR FROM started_at) AS hour_of_day, member_casual, AVG(ride_length) AS avg_ride_duration
+FROM `root-gist-408601.bikes.cleaned_combined_data`
+GROUP BY hour_of_day, member_casual;
+
+
+--------- Average Ride length Per month ------------
+
+
+SELECT month, member_casual, AVG(ride_length) AS avg_ride_duration
+FROM `root-gist-408601.bikes.cleaned_combined_data`
+GROUP BY month, member_casual;
+
+
+--------- Average Ride length Per week ------------
+
+
+SELECT day_of_week, member_casual, AVG(ride_length) AS avg_ride_duration
+FROM `root-gist-408601.bikes.cleaned_combined_data`
+GROUP BY day_of_week, member_casual;
+
+
+
+
+
+
+
+
+
