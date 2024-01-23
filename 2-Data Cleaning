@@ -1,30 +1,10 @@
-
--- Counting the occurrences of null values in each column --
-
-
-SELECT COUNT(*) - COUNT(ride_id) ride_id,
- COUNT(*) - COUNT(rideable_type) rideable_type,
- COUNT(*) - COUNT(started_at) started_at,
- COUNT(*) - COUNT(ended_at) ended_at,
- COUNT(*) - COUNT(start_station_name) start_station_name,
- COUNT(*) - COUNT(start_station_id) start_station_id,
- COUNT(*) - COUNT(end_station_name) end_station_name,
- COUNT(*) - COUNT(end_station_id) end_station_id,
- COUNT(*) - COUNT(start_lat) start_lat,
- COUNT(*) - COUNT(start_lng) start_lng,
- COUNT(*) - COUNT(end_lat) end_lat,
- COUNT(*) - COUNT(end_lng) end_lng,
- COUNT(*) - COUNT(member_casual) member_casual
-FROM   `root-gist-408601.bikes.combined_tripdata`;            
-
-
-The code performs data cleaning on the root-gist-408601.bikes.combined_tripdata dataset, 
-creating a refined table, 2022_tripdata.cleaned_combined_data.
-It introduces new columns like day_of_week, month, and ride_length (in seconds), 
-ensuring the dataset's quality by filtering incomplete or short-duration rides for more precise analyses
-
+Data Cleaning 
 
 DROP TABLE IF EXISTS `root-gist-408601.bikes.cleaned_combined_data`;
+
+Creating a refined table, 2023_tripdata.cleaned_combined_data.
+
+
 CREATE TABLE IF NOT EXISTS `root-gist-408601.bikes.cleaned_combined_data` AS (
   SELECT 
     a.ride_id,
