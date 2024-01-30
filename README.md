@@ -15,6 +15,22 @@ SQL Code : [link]( https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-P
 Tableau Visual: 
 
 
+## Links 
+
+### Data Source [Divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html)
+
+### SQL Queries
+
+[1-Data Combine](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/1-Data%20Combine)
+
+[2-Data Cleaning](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/2-Data%20Cleaning)
+
+[3-Data Exploration](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/3-Data%20Exploration)
+
+[4-Data Analysis](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/4-%20Data%20Analysis)
+
+
+
 
 ## Background
 
@@ -31,13 +47,16 @@ As a junior data analyst at Cyclistic, my team is tasked with developing marketi
 
 
 Devise effective marketing strategies to encourage casual riders to become Cyclistic annual members.
+
 ## Business Questions 
 
 How do the behaviors of annual members and casual riders differ in their use of Cyclistic bikes?" The following sections outline the step-by-step approach employed in addressing this project.
 
 
 
-## Ask: Business Task
+## Ask:
+
+### Business Task
 
 
 I'll examine data on how current Cyclistic bike users use the bikes, looking for patterns like usage frequency and other trends. This analysis aims to understand the general habits of two customer groups: annual members and casual riders.
@@ -45,14 +64,17 @@ I'll examine data on how current Cyclistic bike users use the bikes, looking for
 ## Prepare: Data Source Description
 
 
-The information used to address the business question was sourced directly from Cyclistic's internal metrics, capturing data from its stations and bikes. The dataset spans a 5-month duration, from January 2023 to December 2023, organized into individual files for each month. Each table includes 13 columns, featuring ride IDs, bike types, ride start and end times, station identifiers (including name and location), and the rider's membership type.
+The information used to address the business question was sourced directly from Cyclistic's internal metrics [Divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html), capturing data from its stations and bikes. The data has been made available by
+Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement).
+
+The dataset spans a 12-month duration, from January 2023 to December 2023, organized into individual files for each month. Each table includes 13 columns, featuring ride IDs, bike types, ride start and end times, station identifiers (including name and location), and the rider's membership type.
 
 ![image](https://private-user-images.githubusercontent.com/156461228/300289305-83adba3b-4add-4489-8d8e-040985dfcce5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY0NzExNTQsIm5iZiI6MTcwNjQ3MDg1NCwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjg5MzA1LTgzYWRiYTNiLTRhZGQtNDQ4OS04ZDhlLTA0MDk4NWRmY2NlNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyOFQxOTQwNTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04YWU3ZDM0OTk5NDVmNWE3NmUyYWFiODZlM2MzYzEyZDI3ZThiZDlkNzg3ZDdhMWU0NmU2OTk3MjdmZTZhYzE4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.97AU3qjUxmpUmmDuhogALuPcFMJyMnm0yvVjGCZnJCY)
 
 The data is generally unbiased, except for the absence of start and end location data for numerous rides. After a thorough inquiry, it was determined that information for these specific stations was unavailable. I downloaded each monthly CSV file and converted them into .xlsx files for utilization in Excel.
 
 
-## Process: Cleaning the Data
+## Process:
 
 
 After acquiring the data, I examined each file separately in Excel to understand its structure. Given the extensive size of the data, I opted to clean each month's information independently in Excel before attempting any data merging. The following outlines the cleaning process:
@@ -95,19 +117,22 @@ Conducted a count of distinct ride IDs to ensure uniqueness, and verified that t
 
 ### Note: 
            Please be aware that additional cleaning tasks were carried out later in the process to address unexpected issues. Refer to the SQL code in the next section to observe any cleaning actions taken on the combined data.
+ 
 
-## Analyze and Share: Analysis of Data Through Big Query and Tableau
+## Analysis of Data Through Big Query and Tableau
+
+### Combining the Data
+
+SQL Query :[Data Combine](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/1-Data%20Combine) 
 
 We use BigQuery to bring together and clean up different datasets. This is because Microsoft Excel can only handle up to 1,048,576 rows, and since the Cyclistic dataset has over 5.6 million rows, we need a platform like BigQuery that can handle such large amounts of data.
 
-
-### Combining the Data
-SQL Query:
 Tables for 12 CSV files have been added to the '2023_tripdata' dataset. Furthermore, a table named "combined_data" has been established, encompassing a total of 5,719,877 rows of data representing the entire year.
 
 
 
 ### Findings:
+
 1-  The following table displays the names of all columns along with their corresponding data types.
 
 ![IMAGE](https://private-user-images.githubusercontent.com/156461228/300295615-5b536a74-349a-4629-bb0b-5d5d57184cf0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY0Nzg0MjcsIm5iZiI6MTcwNjQ3ODEyNywicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk1NjE1LTViNTM2YTc0LTM0OWEtNDYyOS1iYjBiLTVkNWQ1NzE4NGNmMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyOFQyMTQyMDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wYWUxY2ZkMDNmNTJmYTU5MmZmMWM1NWNmZDIwMTg0ZGEwYWYwZmZiZDJmMjdkYTdlM2ZiNzI4OWRkZDhhNDc2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.dZ9ZqBqR_sA8EYN0pvadaHgYDoGmHV-z4B5uzUwoUqk)
@@ -125,7 +150,7 @@ Tables for 12 CSV files have been added to the '2023_tripdata' dataset. Furtherm
 
 ## Data Cleaning
 
-SQL Query[Data Cleaning]( 
+SQL Query[Data Cleaning](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/2-Data%20Cleaning)
 
 1- Rows containing missing values have been removed.
 
