@@ -23,9 +23,9 @@ Tableau Visual:
 
 [1-Data Combine](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/1-Data%20Combine)
 
-[2-Data Cleaning](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/2-Data%20Cleaning)
+[2-Data Exploration](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/3-Data%20Exploration)
 
-[3-Data Exploration](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/3-Data%20Exploration)
+[3-Data Cleaning](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/2-Data%20Cleaning)
 
 [4-Data Analysis](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/4-%20Data%20Analysis)
 
@@ -131,7 +131,8 @@ Tables for 12 CSV files have been added to the '2023_tripdata' dataset. Furtherm
 
 
 
-### Findings:
+### Data Exploration 
+SQL Query :[Data Exploration](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/2-Data%20Exploration)
 
 1-  The following table displays the names of all columns along with their corresponding data types.
 
@@ -161,7 +162,8 @@ SQL Query[Data Cleaning](https://github.com/Bushra-YM/Capstone-Google-Data-Analy
 
 ## Analyze and Share
 
-SQL Query[Data Analysis]( 
+SQL Query[Data Analysis](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/4-%20Data%20Analysis)
+
 Data Visualization:
 
 The data has been organized and is now ready for analysis. I performed queries on various pertinent tables and visualized the results using Tableau.
