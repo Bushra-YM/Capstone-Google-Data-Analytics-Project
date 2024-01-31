@@ -12,7 +12,7 @@ I've been learning about data analysis with the Google Data Analytics Certificat
 Links to code and visuals will be posted at the bottom of the page, but I will include them here for convenience as well.
 SQL Code : [link]( https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project)
 
-Tableau Visual: 
+Tableau Visual:[Link](https://public.tableau.com/app/profile/bushra.mihdawi/viz/BUSHRAYOUSEF/TotalTrips#1) 
 
 
 ## Links 
