@@ -99,18 +99,22 @@ I employed conditional formatting to highlight blank cells in gray, facilitating
 Established a new column called "ride_length" to determine the duration of each bike ride in minutes. This involved calculating the time difference between the end and start times.
 
 
-![Screenshot 2024-01-11 123430](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/8720b3ea-af23-497f-a738-824aaf5b022a)
+![Screenshot 2024-01-11 125519](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/53259bf9-82a2-4cef-a9a7-06bb7982a8e6)
 
 
 
 Established a new column called "day_of_week" to extract the day name from each start time and saved it as a numerical representation ranging from 1 to 7.
 
 
+![Screenshot 2024-01-11 164007](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/f2056a53-0b1b-436b-8111-da78b89f736d)
+
 
 
 I reviewed the maximum and minimum values in all rows to identify outliers. During this examination, I found negative times, and it became evident that Daylight Saving Time (DST) had affected the recorded ride lengths. To address this issue, I introduced a new formula specifically for these rides to rectify the ride length data.
 
-![IMAGE](https://private-user-images.githubusercontent.com/156461228/300295366-4bbdf2a3-8a46-4476-9ad1-6c9e92141b58.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MzI2MDEsIm5iZiI6MTcwNjczMjMwMSwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk1MzY2LTRiYmRmMmEzLThhNDYtNDQ3Ni05YWQxLTZjOWU5MjE0MWI1OC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQyMDE4MjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jYzUzYjMxYzRlNmYwY2RmMThlNDA1OWM4YTUxMjNlMzJjM2RjMTdkNzFlYzI2YmU3ZjY4MDRjNTk1MmIxNjczJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.lZt4Txr5Tgz2Sq1jYuh3v6xtboviLnnzg8svSZvNrqg)
+
+![Screenshot 2024-01-11 125903](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/f63a1b93-ed3a-4202-8da3-6fb27bd48ed7)
+
 
                                                  Negative ride times caused by DST time change
 
@@ -141,15 +145,18 @@ SQL Query :[Data Exploration](https://github.com/Bushra-YM/Capstone-Google-Data-
 
 1-  The following table displays the names of all columns along with their corresponding data types.
 
-![IMAGE](https://private-user-images.githubusercontent.com/156461228/300295615-5b536a74-349a-4629-bb0b-5d5d57184cf0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MzI2MDEsIm5iZiI6MTcwNjczMjMwMSwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk1NjE1LTViNTM2YTc0LTM0OWEtNDYyOS1iYjBiLTVkNWQ1NzE4NGNmMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQyMDE4MjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zZGFjZmE4MTI2NmNhYjc5NDBjNDk4NGJkNDUxNjFiMjZkNGJmMTQ4MDZlOGM5NTJiNGI2NWM1NDIzNTI3MjA5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.Qpzj1Nke0hHZq03hp4x0V1g1UcovThXlz_xPGdEmvVE)
+![Screenshot 2024-01-23 161007](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/234f7149-d3d2-42e7-aa08-21108f3187fc)
+
 
 2- The table below illustrates the count of null values in each column.
 
-![IMAGE](https://private-user-images.githubusercontent.com/156461228/300295659-8d1de443-aebf-4482-9bdb-11ae3afb0fa4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MzI2MDEsIm5iZiI6MTcwNjczMjMwMSwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk1NjU5LThkMWRlNDQzLWFlYmYtNDQ4Mi05YmRiLTExYWUzYWZiMGZhNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQyMDE4MjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04N2U2ZjUyNThhMWM5NjIxM2I3YTUxMWU5YTY1YjFkZTc5ODZkNDg4MTkyMmEwMWEwY2UwNjI3NjQ2Y2RiYzI5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.miBk_fxgFXzPSavL9vGAYrtc_EnZnke77NTKxg2DcZk)
+![Screenshot 2024-01-23 161832](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/c72894e0-6d3b-4dbe-871f-a086bccdfe96)
+
 
 3- Since ride_id has no null values, we can utilize it to identify and check for duplicates.
 
-![IMAGE](https://private-user-images.githubusercontent.com/156461228/300295707-b61d322a-3d70-4afb-a2ad-91bcc0ca7a78.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MzI2MDEsIm5iZiI6MTcwNjczMjMwMSwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk1NzA3LWI2MWQzMjJhLTNkNzAtNGFmYi1hMmFkLTkxYmNjMGNhN2E3OC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQyMDE4MjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05ZWM1M2YyNTRjZGU5YTY2ZDA4ZDg0Njc5YTgxMTE0NDdhYTY0NjU5NmRhN2JmMmQyZjRlYWJkNjgyZGQ3YTcxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.VzqRUGLlmhWpUWdZsPJyT-s9lyVp1xEmVOxC1Q2LDuY)
+![Screenshot 2024-01-23 162407](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/cb033d66-9b27-49e5-9f30-74b3cf7e03fd)
+
 
  4- The columns started_at and ended_at display the trip's start and end times in the YYYY-MM-DD hh:mm:ss UTC format. To determine the overall trip duration, a new column named ride_length can be generated.
 
@@ -175,7 +182,8 @@ The data has been organized and is now ready for analysis. I performed queries o
 The initial analysis involves comparing member and casual riders, focusing on the types of bikes they use.
 
 
-![image](https://private-user-images.githubusercontent.com/156461228/300295990-acd30066-0294-4549-a273-e01d91c59308.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY0Nzg4NDgsIm5iZiI6MTcwNjQ3ODU0OCwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk1OTkwLWFjZDMwMDY2LTAyOTQtNDU0OS1hMjczLWUwMWQ5MWM1OTMwOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyOFQyMTQ5MDhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ZDJlNjcwMzk2NGI1M2FiYjYxNWM3MDdkMzlhMjJiMTFmMTU1MWM4ZDM1OGYxNjBhZWJiMDc3M2YyMzI3NmI3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.HBVerdCJOwzzBxG-eJ718gNBCyN8AWDoM-jFg-fGMQE)
+![Screenshot 2024-01-23 202908](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/497e2c1e-c3c0-4b20-8f28-d0950b854b48)
+
 
 
 
@@ -184,9 +192,11 @@ More than half (64.53%) of the riders are members, and the rest (35.47%) are cas
 
 #### Next, we analyze the distribution of trips based on months and days of the week.
 
-![image](https://private-user-images.githubusercontent.com/156461228/300296093-c18edf0a-c2f1-44dc-b379-605c4791caee.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY0Nzg5NzksIm5iZiI6MTcwNjQ3ODY3OSwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk2MDkzLWMxOGVkZjBhLWMyZjEtNDRkYy1iMzc5LTYwNWM0NzkxY2FlZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyOFQyMTUxMTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yYjRjMjEzOWRjZmU2NmQxMzBiM2I5MGIwOGNiM2Y1OWZkMThjZTViNDQxZGI3YzZlZTQyMjkxZWE4ZWIxM2Q0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.J_seh3TeM2fFPwls_UuNb5b3oMdXsD7usUMFIhmQP_o)
+![Screenshot 2024-01-23 204154](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/88489eee-a603-468f-9b05-415d2ccb53d9)
 
-![image](https://private-user-images.githubusercontent.com/156461228/300296187-e49492f5-e263-42e7-80e5-1f132dae5b28.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY0NzkwOTEsIm5iZiI6MTcwNjQ3ODc5MSwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk2MTg3LWU0OTQ5MmY1LWUyNjMtNDJlNy04MGU1LTFmMTMyZGFlNWIyOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyOFQyMTUzMTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01NTdlZWEzNmIyNzI0OGQzMmViZWQxNmY0MjgwOTM5Y2MyYjc0YjYzZGZlZGJmYTZmNjYzODFhMmQzM2I0OGQyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.VO3mdvoGZ9Nc_lL1k6-1dE1dVJe0ptX74BRdE26ysGc)
+
+![Screenshot 2024-01-24 172630](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/b46d3085-bdc9-4ee2-b6e1-ba8a4b89b1d5)
+
 
 ### Monthly: In terms of monthly trips, both casual riders and members demonstrate similar trends, with increased trips in spring and summer and reduced activity in winter. The distinction between casual riders and members is minimal, particularly during July in the summer season.
 
@@ -203,9 +213,9 @@ To delve deeper into the distinctions in behavior between casual and member ride
 
 ## Average Ride Durations Monthly/Weekly/Hourly  in 2023 Trips
 
-![image](https://private-user-images.githubusercontent.com/156461228/300296361-8546dcb0-534a-424e-a0b9-b29f534e6641.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY0NzkyOTksIm5iZiI6MTcwNjQ3ODk5OSwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk2MzYxLTg1NDZkY2IwLTUzNGEtNDI0ZS1hMGI5LWIyOWY1MzRlNjY0MS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyOFQyMTU2MzlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03Y2I4ZDU3ZDc1NWYwMzZjYWY4NjNmNDUzMmEzNjNiOTRkN2Y0YjViMjAwMDM1MTU0NGU0NTAzZTBhY2ExZWU4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.-yEEw4N53Y9kTPwER6Q-Hr7E8lUyK_ANXGkmzegairU)
+![Screenshot 2024-01-24 174556](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/9f69daba-08ce-4a34-9eb3-97fa1d898b7e)
 
-![image](https://private-user-images.githubusercontent.com/156461228/300296375-a1bdf645-d34a-48e0-9349-52b4017b16d3.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY0NzkzMTUsIm5iZiI6MTcwNjQ3OTAxNSwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk2Mzc1LWExYmRmNjQ1LWQzNGEtNDhlMC05MzQ5LTUyYjQwMTdiMTZkMy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyOFQyMTU2NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yMGY4NTBiMmUzZWRiM2MyODhlMzljNWZkOTg1OWFlNzhiOTlmZGUxZmMxN2M3OWQ1YzkzMDc2YTljMzZiZDA2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.8SgdbgbWxK1xX408mr--Qp-k9DhUps-pCy05t-r8kg4)
+![Screenshot 2024-01-24 174733](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/893eac6d-04d6-4629-889e-50c91294f21a)
 
 
 
@@ -220,14 +230,14 @@ To gain a deeper understanding of the distinctions between casual and member rid
 
 ## Total Trips Start Locations in 2023
 
-![image](https://private-user-images.githubusercontent.com/156461228/300296497-61ad3098-19b3-4c43-a03d-883b538717af.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY0Nzk0NTAsIm5iZiI6MTcwNjQ3OTE1MCwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk2NDk3LTYxYWQzMDk4LTE5YjMtNGM0My1hMDNkLTg4M2I1Mzg3MTdhZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyOFQyMTU5MTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iZDNhZjYzZTVlZTdkMTA0YTg0NDIwOGI2NmM1MjQ2NGQwOTRjMDUzZjZlZWVhZjgwMWQ1YTc5NDhkNjM1NzhlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.WBRZZ5SJ0TZdAj6cUwtQP7Nr5YW6UMmuBd7vIaQbtJs)
+![Screenshot 2024-01-24 180805](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/227ee580-aa53-4cc1-9ca5-ed2dd247c100)
+
 
 
 
 ## Total Trips End Locations in 2023
 
-![image](https://private-user-images.githubusercontent.com/156461228/300296511-1ab7c548-6f0f-469a-9a5d-ae7967e8565c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY0Nzk0NjgsIm5iZiI6MTcwNjQ3OTE2OCwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk2NTExLTFhYjdjNTQ4LTZmMGYtNDY5YS05YTVkLWFlNzk2N2U4NTY1Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyOFQyMTU5MjhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xMzcxYjgwNTQ2YWU4YTgzOTQ4NzdhMTk4NzMzZjBiOWU5YTY3YjJmZmM2M2I1YTFmNmE2NzZjNmY5NWY4MjEwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.DOF8YmAYV7-ydkW8HBqkxOHoeXX9LlbaMWa01eSvsPU)
-
+![Screenshot 2024-01-24 181841](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/68a5cadf-c6f9-4eec-a8e7-6cff8450312e)
 
 
 
