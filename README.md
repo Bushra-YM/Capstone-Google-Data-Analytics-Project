@@ -80,7 +80,7 @@ The data is generally unbiased, except for the absence of start and end location
 After acquiring the data, I examined each file separately in Excel to understand its structure. Given the extensive size of the data, I opted to clean each month's information independently in Excel before attempting any data merging. The following outlines the cleaning process:
 Examined all rows in each file for duplicates using Excel's built-in feature, and no duplicates were identified.
 
-![image](https://private-user-images.githubusercontent.com/156461228/300294985-4464ef3e-6cb8-4769-b19f-088e96e2c695.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MzIyMzMsIm5iZiI6MTcwNjczMTkzMywicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk0OTg1LTQ0NjRlZjNlLTZjYjgtNDc2OS1iMTlmLTA4OGU5NmUyYzY5NS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQyMDEyMTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wZmZhOGQ0YzIxMDdjYTllNjQ3MTc3ZTAyMWFlMWMwMzNlOGFmZjUzNWQwOTg4MDE5NDVmZWVmMzZkM2NiZTQ0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.eE2Zh-Zy6k_5jDUDATGnRpPTWprEHp9wzs1nC_kYni8)
+![Screenshot 2024-01-11 120852](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/4e86832e-529c-4608-b6b7-895b8a47ce01)
 
                                                   Example of duplicate check results for May data
 
@@ -88,19 +88,23 @@ Examined all rows in each file for duplicates using Excel's built-in feature, an
 
 I employed conditional formatting to highlight blank cells in gray, facilitating the identification of missing data. Subsequently, rows with incomplete information for both start and end station locations in several trips were excluded from the dataset.
 
-![image](https://private-user-images.githubusercontent.com/156461228/300295123-0fedb1ff-fdb6-41c1-8cf3-356fb55b9ece.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MzIyMzMsIm5iZiI6MTcwNjczMTkzMywicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk1MTIzLTBmZWRiMWZmLWZkYjYtNDFjMS04Y2YzLTM1NmZiNTViOWVjZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQyMDEyMTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xNWM0M2FmNmIxMmQzZmFkOThiMDRmMGMwYjY4Zjk5Y2YxZmI2MGEzZWVkYmU4YTVmMTMyN2FmNjlmMGRmNWY2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.xvRClna_XErmQe4gH3fiCmcgWovN0Z_PMvYQn0_AJ-A)
+
+![Screenshot 2024-01-11 122615](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/d67286ee-526a-410e-a840-0c83ac1d6000)
+
 
                                                   Empty fields were identified for station names.
 
 
 Established a new column called "ride_length" to determine the duration of each bike ride in minutes. This involved calculating the time difference between the end and start times.
 
-![image](https://private-user-images.githubusercontent.com/156461228/300295222-d09ff59c-7fe0-4b6c-9b8d-260e898be004.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MzIyMzMsIm5iZiI6MTcwNjczMTkzMywicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk1MjIyLWQwOWZmNTljLTdmZTAtNGI2Yy05YjhkLTI2MGU4OThiZTAwNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQyMDEyMTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00OTk5ODk5MzRlNzZjODhhNjU3ZjBhNDEzM2I4YTY3ZDg4M2JmYmUzZTM5OTQzZjc3NjU1OTJiZGU5Y2ZhNjU2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.eVq8bFI5LCRZt9_wvH7TN-l3EFKwYEE_K-nz9bjHQpo)
+![Screenshot 2024-01-11 123430](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/5231d782-61c0-401e-99eb-649d84144331)
+
 
 
 Established a new column called "day_of_week" to extract the day name from each start time and saved it as a numerical representation ranging from 1 to 7.
 
-![IMAGE](https://private-user-images.githubusercontent.com/156461228/300295291-2b7fc16a-6eac-4c67-bb86-a5872c47341d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MzI2MDEsIm5iZiI6MTcwNjczMjMwMSwicGF0aCI6Ii8xNTY0NjEyMjgvMzAwMjk1MjkxLTJiN2ZjMTZhLTZlYWMtNGM2Ny1iYjg2LWE1ODcyYzQ3MzQxZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQyMDE4MjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02YzU2MzUyNjQ5MWNhNzFhMTY4ZGYwN2MyZTE0NTQxNzA3MzAwNDUwNGY4MTkzMDE1MWViZTIyZTRlMmNmYTQ0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.ZTUUkj4eEBEIsTJd9suYqMuxsDu9ndYmObxJcxv4n64)
+![Screenshot 2024-01-11 123430](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/8720b3ea-af23-497f-a738-824aaf5b022a)
+
 
 
 I reviewed the maximum and minimum values in all rows to identify outliers. During this examination, I found negative times, and it became evident that Daylight Saving Time (DST) had affected the recorded ride lengths. To address this issue, I introduced a new formula specifically for these rides to rectify the ride length data.
