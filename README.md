@@ -176,7 +176,7 @@ SQL Query[Data Cleaning](https://github.com/Bushra-YM/Capstone-Google-Data-Analy
 
 SQL Query[Data Analysis](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/blob/main/4-%20Data%20Analysis)
 
-Data Visualization:
+Data Visualization:[Tableau](https://public.tableau.com/app/profile/bushra.mihdawi/viz/BUSHRAYOUSEF/TotalTrips#1) 
 
 The data has been organized and is now ready for analysis. I performed queries on various pertinent tables and visualized the results using Tableau.
 The initial analysis involves comparing member and casual riders, focusing on the types of bikes they use.
