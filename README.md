@@ -69,7 +69,7 @@ Motivate International Inc. under this [license](https://divvybikes.com/data-lic
 
 The dataset spans a 12-month duration, from January 2023 to December 2023, organized into individual files for each month. Each table includes 13 columns, featuring ride IDs, bike types, ride start and end times, station identifiers (including name and location), and the rider's membership type.
 
-![image](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/issues/1#issue-2104318395)
+![Screenshot 2024-01-11 120852](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/4e86832e-529c-4608-b6b7-895b8a47ce01)
 
 The data is generally unbiased, except for the absence of start and end location data for numerous rides. After a thorough inquiry, it was determined that information for these specific stations was unavailable. I downloaded each monthly CSV file and converted them into .xlsx files for utilization in Excel.
 
@@ -80,7 +80,8 @@ The data is generally unbiased, except for the absence of start and end location
 After acquiring the data, I examined each file separately in Excel to understand its structure. Given the extensive size of the data, I opted to clean each month's information independently in Excel before attempting any data merging. The following outlines the cleaning process:
 Examined all rows in each file for duplicates using Excel's built-in feature, and no duplicates were identified.
 
-![Screenshot 2024-01-11 120852](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/4e86832e-529c-4608-b6b7-895b8a47ce01)
+![Screenshot 2024-01-11 122615](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/d67286ee-526a-410e-a840-0c83ac1d6000)
+
 
                                                   Example of duplicate check results for May data
 
@@ -88,8 +89,8 @@ Examined all rows in each file for duplicates using Excel's built-in feature, an
 
 I employed conditional formatting to highlight blank cells in gray, facilitating the identification of missing data. Subsequently, rows with incomplete information for both start and end station locations in several trips were excluded from the dataset.
 
+![Screenshot 2024-01-11 123430](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/5231d782-61c0-401e-99eb-649d84144331)
 
-![Screenshot 2024-01-11 122615](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/d67286ee-526a-410e-a840-0c83ac1d6000)
 
 
                                                   Empty fields were identified for station names.
@@ -97,13 +98,13 @@ I employed conditional formatting to highlight blank cells in gray, facilitating
 
 Established a new column called "ride_length" to determine the duration of each bike ride in minutes. This involved calculating the time difference between the end and start times.
 
-![Screenshot 2024-01-11 123430](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/5231d782-61c0-401e-99eb-649d84144331)
+
+![Screenshot 2024-01-11 123430](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/8720b3ea-af23-497f-a738-824aaf5b022a)
 
 
 
 Established a new column called "day_of_week" to extract the day name from each start time and saved it as a numerical representation ranging from 1 to 7.
 
-![Screenshot 2024-01-11 123430](https://github.com/Bushra-YM/Capstone-Google-Data-Analytics-Project/assets/156461228/8720b3ea-af23-497f-a738-824aaf5b022a)
 
 
 
